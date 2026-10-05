@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!--
+  KARIM ALI SHAH — PORTFOLIO
+  To edit: add your LinkedIn URL where it says [your-linkedin-url],
+  and upload your CV to the same GitHub repository as cv.pdf.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Karim Ali Shah | Senior Amazon Brand Manager</title>
+<meta name="description" content="Karim Ali Shah, Senior Amazon Brand Manager with 5+ years scaling Amazon brands across US, UK, EU, CA, JP and AU marketplaces.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #14252B; --ink-soft: #4A5D63; --paper: #F3F6F5; --card: #FFFFFF;
+    --line: #D6E0DE; --teal: #1F6B68; --marigold: #F2A93B; --marigold-soft: #FCEBCB;
+    --display: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+    --body: "Figtree", "Segoe UI", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #E7EFEE; --ink-soft: #A9BBBA; --paper: #0F1C20; --card: #16272C;
+      --line: #284045; --teal: #5FB3AE; --marigold: #F2B04F; --marigold-soft: #3A3020;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); color: var(--ink); background: var(--paper); font-size: 1.0625rem; line-height: 1.6; padding-bottom: env(safe-area-inset-bottom, 0px); }
+  a { color: inherit; }
+  a:focus-visible { outline: 3px solid var(--marigold); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
+
+  nav { padding: calc(1.25rem + env(safe-area-inset-top, 0px)) 0 1.25rem; }
+  nav .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .logo { font-family: var(--display); font-weight: 800; font-size: 1.35rem; text-decoration: none; }
+  .logo span { color: var(--teal); }
+  nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  nav ul a { text-decoration: none; color: var(--ink-soft); font-weight: 500; }
+  nav ul a:hover { color: var(--ink); }
+
+  .hero { padding: 3.5rem 0 4.5rem; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3.5rem; align-items: center; }
+  .hero h1 { font-family: var(--display); font-weight: 800; letter-spacing: -0.02em; font-size: clamp(2.4rem, 5.5vw, 4rem); line-height: 1.05; margin-bottom: 1.25rem; }
+  .hero p.lead { font-size: 1.2rem; color: var(--ink-soft); max-width: 34rem; margin-bottom: 2rem; }
+  .actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 0.8rem 1.4rem; border-radius: 999px; font-weight: 600; text-decoration: none; border: 2px solid var(--ink); }
+  .btn.primary { background: var(--ink); color: var(--paper); }
+  .btn.primary:hover { background: var(--teal); border-color: var(--teal); }
+  .btn.ghost:hover { background: var(--card); }
+
+  .listing { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 1.75rem; box-shadow: 8px 8px 0 var(--marigold); }
+  .listing .tag { display: inline-block; background: var(--marigold-soft); font-size: 0.85rem; font-weight: 600; padding: 0.2rem 0.65rem; border-radius: 6px; margin-bottom: 0.9rem; }
+  .listing h2 { font-family: var(--display); font-size: 1.25rem; line-height: 1.3; margin-bottom: 0.5rem; }
+  .stars { color: var(--marigold); letter-spacing: 2px; }
+  .stars small { color: var(--ink-soft); letter-spacing: 0; margin-left: 0.4rem; font-size: 0.9rem; }
+  .listing h3 { font-size: 0.95rem; font-weight: 600; margin: 1.1rem 0 0.5rem; }
+  .listing ul { padding-left: 1.1rem; color: var(--ink-soft); font-size: 0.97rem; }
+  .listing li { margin-bottom: 0.35rem; }
+  .listing .stock { margin-top: 1.1rem; color: var(--teal); font-weight: 600; }
+
+  section.block { padding: 4.5rem 0; border-top: 1px solid var(--line); }
+  .block h2.title { font-family: var(--display); font-weight: 800; letter-spacing: -0.015em; font-size: clamp(1.8rem, 3.5vw, 2.5rem); line-height: 1.15; margin-bottom: 0.75rem; }
+  .block p.intro { color: var(--ink-soft); max-width: 40rem; margin-bottom: 2.5rem; }
+
+  .wins { display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem; }
+  .win { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 1.75rem; }
+  .win.big { grid-row: span 2; display: flex; flex-direction: column; justify-content: space-between; border-top: 6px solid var(--marigold); }
+  .win .num { font-family: var(--display); font-weight: 800; letter-spacing: -0.02em; font-size: 2.6rem; line-height: 1; color: var(--teal); margin-bottom: 0.6rem; }
+  .win.big .num { font-size: clamp(3.5rem, 8vw, 5.5rem); }
+  .win h3 { font-family: var(--display); font-size: 1.2rem; line-height: 1.3; margin-bottom: 0.5rem; }
+  .win p { color: var(--ink-soft); font-size: 0.98rem; }
+  .win .where { margin-top: 1rem; font-size: 0.9rem; font-weight: 600; color: var(--ink); }
+
+  .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem 2.5rem; }
+  .skill h3 { font-family: var(--display); font-size: 1.15rem; margin-bottom: 0.4rem; padding-top: 0.9rem; border-top: 3px solid var(--teal); }
+  .skill p { color: var(--ink-soft); font-size: 0.98rem; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
+  .chip { border: 1.5px solid var(--line); background: var(--card); border-radius: 999px; padding: 0.4rem 1rem; font-weight: 500; font-size: 0.95rem; }
+  .chip.hl { border-color: var(--teal); }
+  .sub { font-family: var(--display); font-size: 1.1rem; margin-bottom: 0.9rem; }
+
+  .timeline { list-style: none; border-left: 2px solid var(--line); padding-left: 1.75rem; max-width: 48rem; }
+  .timeline > li { position: relative; margin-bottom: 2.5rem; }
+  .timeline > li::before { content: ""; position: absolute; left: calc(-1.75rem - 7px); top: 0.45rem; width: 12px; height: 12px; border-radius: 50%; background: var(--marigold); border: 2px solid var(--paper); }
+  .timeline .when { color: var(--ink-soft); font-size: 0.9rem; font-weight: 500; }
+  .timeline h3 { font-family: var(--display); font-size: 1.2rem; margin: 0.15rem 0 0.1rem; }
+  .timeline .co { font-weight: 600; color: var(--teal); margin-bottom: 0.5rem; display: block; }
+  .timeline ul { padding-left: 1.1rem; color: var(--ink-soft); font-size: 0.98rem; }
+  .timeline ul li { margin-bottom: 0.3rem; }
+
+  .edu { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .edu div { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 1.5rem; }
+  .edu h3 { font-family: var(--display); font-size: 1.1rem; margin-bottom: 0.3rem; }
+  .edu p { color: var(--ink-soft); font-size: 0.98rem; }
+
+  .contact { background: var(--ink); color: var(--paper); border-radius: 18px; padding: 3rem; margin: 1rem 0 4rem; }
+  .contact h2 { font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 2.4rem); line-height: 1.15; margin-bottom: 0.75rem; }
+  .contact p { opacity: 0.8; max-width: 34rem; margin-bottom: 1.75rem; }
+  .contact .btn { border-color: var(--paper); color: var(--paper); }
+  .contact .btn.primary { background: var(--marigold); border-color: var(--marigold); color: #14252B; }
+  .contact .btn:hover { background: rgba(255,255,255,0.1); }
+  .contact .btn.primary:hover { background: #F7C06B; }
+  footer { text-align: center; color: var(--ink-soft); font-size: 0.9rem; padding-bottom: 2.5rem; }
+
+  @media (max-width: 860px) {
+    .hero .wrap, .wins { grid-template-columns: 1fr; }
+    .win.big { grid-row: auto; }
+    .skills { grid-template-columns: 1fr 1fr; }
+    .hero { padding-top: 2rem; }
+  }
+  @media (max-width: 560px) {
+    .skills, .edu { grid-template-columns: 1fr; }
+    nav ul { gap: 1rem; font-size: 0.95rem; }
+    .contact { padding: 2rem 1.5rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">Karim Ali Shah<span>.</span></a>
+    <ul>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>I scale Amazon brands from launch to 7 figures.</h1>
+      <p class="lead">I'm Karim Ali Shah, a Senior Amazon Brand Manager with 5+ years growing brands across the US, UK, EU, Canada, Japan and Australia through PPC, organic ranking and profit-focused decisions.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:Karimmasoomghuli@gmail.com">Email me</a>
+        <a class="btn ghost" href="[your-linkedin-url]" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="cv.pdf">Download CV</a>
+      </div>
+    </div>
+
+    <aside class="listing" aria-label="Profile summary">
+      <span class="tag">Brand Manager's choice</span>
+      <h2>Karim Ali Shah, Senior Amazon Brand Manager: PPC, Organic Ranking and Marketplace Growth, 5+ Years Experience</h2>
+      <div class="stars" aria-label="Rated 5 out of 5">★★★★★<small>15+ Amazon accounts managed</small></div>
+      <h3>About this professional</h3>
+      <ul>
+        <li>Generated $103K+ in sales in 30 days from one PPC restructure</li>
+        <li>Owns P&amp;L and contribution margin for 7-figure brand portfolios</li>
+        <li>Grows organic ranking using Search Query Performance data</li>
+        <li>Reinstates suspended accounts and fixes catalog issues fast</li>
+        <li>Leads remote teams with clear SOPs and weekly KPI reporting</li>
+      </ul>
+      <p class="stock">In stock. Open to new roles.</p>
+    </aside>
+  </div>
+</header>
+
+<section class="block" id="results">
+  <div class="wrap">
+    <h2 class="title">Results</h2>
+    <p class="intro">What my work has delivered for the brands I've managed.</p>
+    <div class="wins">
+      <article class="win big">
+        <div>
+          <div class="num">$103K+</div>
+          <h3>Sales in 30 days from a single PPC restructure</h3>
+          <p>I rebuilt the campaign structure, reallocated budget toward the keywords that converted and tightened bid strategy. The result was over $103K in sales within a month, alongside better ACoS and TACoS.</p>
+        </div>
+        <p class="where">Ellie J Maui</p>
+      </article>
+      <article class="win">
+        <div class="num">15+</div>
+        <h3>Amazon accounts across 9 marketplaces</h3>
+        <p>Led a team managing PPC, SEO and daily audits for accounts in the US, CA, MX, UK, FR, IT, DE, JP and AU.</p>
+        <p class="where">Hyper Future / Shenzhen Rondaful Technology</p>
+      </article>
+      <article class="win">
+        <div class="num">Reinstated</div>
+        <h3>Suspended Amazon accounts back to selling</h3>
+        <p>Diagnosed the issues, prepared appeals and recovered lost revenue for suspended accounts.</p>
+        <p class="where">Hyper Future / Shenzhen Rondaful Technology</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="skills">
+  <div class="wrap">
+    <h2 class="title">What I do</h2>
+    <p class="intro">Full ownership of Amazon growth, from advertising and ranking to pricing and profit.</p>
+    <div class="skills">
+      <div class="skill"><h3>PPC strategy</h3><p>Campaign structure, bid optimization and keyword harvesting that cut wasted spend and improve ROAS, ACoS and TACoS.</p></div>
+      <div class="skill"><h3>Organic ranking</h3><p>Search Query Performance analysis, keyword research and clustering to grow visibility and conversion rate.</p></div>
+      <div class="skill"><h3>Listing optimization</h3><p>Titles, bullets, images, A+ Content and backend search terms built for indexing and conversion.</p></div>
+      <div class="skill"><h3>Profit and P&amp;L</h3><p>Fee analysis, pricing tests, promotions and coupons to protect contribution margin.</p></div>
+      <div class="skill"><h3>Catalog and account health</h3><p>Suppressed listings, variation split and merge, and suspended account reinstatement.</p></div>
+      <div class="skill"><h3>Inventory and expansion</h3><p>Restock forecasting and launching brands into new international marketplaces.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="title">Marketplaces and tools</h2>
+    <p class="intro">Where I've sold and what I use every day.</p>
+    <h3 class="sub">Marketplaces</h3>
+    <div class="chips">
+      <span class="chip hl">United States</span><span class="chip hl">United Kingdom</span><span class="chip hl">Germany</span>
+      <span class="chip hl">France</span><span class="chip hl">Italy</span><span class="chip hl">Canada</span>
+      <span class="chip hl">Mexico</span><span class="chip hl">Japan</span><span class="chip hl">Australia</span>
+    </div>
+    <h3 class="sub">Tools</h3>
+    <div class="chips">
+      <span class="chip">Amazon Seller Central</span><span class="chip">Amazon Ads Console</span>
+      <span class="chip">Helium 10 (Cerebro, Magnet, Keyword Tracker)</span><span class="chip">DataDive</span>
+      <span class="chip">Sellerboard</span><span class="chip">Shopify</span><span class="chip">Advanced Excel and Google Sheets</span>
+      <span class="chip">ClickUp</span><span class="chip">Asana</span><span class="chip">Slack</span><span class="chip">Trello</span>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="experience">
+  <div class="wrap">
+    <h2 class="title">Experience</h2>
+    <p class="intro">Five years of hands-on Amazon work, from operations to senior brand management.</p>
+    <ul class="timeline">
+      <li>
+        <span class="when">Jan 2026 to May 2026, Remote</span>
+        <h3>Senior Amazon Brand Manager / Project Manager</h3>
+        <span class="co">Mr Prime</span>
+        <ul>
+          <li>Owned the full Amazon growth strategy for assigned brands: PPC, organic ranking, pricing and profitability.</li>
+          <li>Used Search Query Performance data to grow organic visibility and conversion rate.</li>
+          <li>Improved contribution margins through fee analysis, pricing changes and ad efficiency.</li>
+          <li>Presented weekly KPI reports and action plans directly to stakeholders.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="when">Jan 2024 to Dec 2025, Remote</span>
+        <h3>Brand Manager</h3>
+        <span class="co">Ellie J Maui</span>
+        <ul>
+          <li>Generated $103K+ in sales in 30 days through a PPC campaign restructure.</li>
+          <li>Improved ACoS and TACoS through restructuring, budget reallocation and bid strategy.</li>
+          <li>Drove organic ranking gains with Helium 10 research and competitor gap analysis.</li>
+          <li>Ran promotions, coupons, pricing tests and seasonal sales, and fixed suppressed listings and variation issues.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="when">Dec 2022 to Dec 2023</span>
+        <h3>Amazon Account Manager (Team Lead)</h3>
+        <span class="co">Hyper Future Pvt Ltd / Shenzhen Rondaful Technology Co., Ltd.</span>
+        <ul>
+          <li>Managed 15+ Amazon accounts across 9 marketplaces with profitable, sustained PPC growth.</li>
+          <li>Handled listing SEO, A+ Content, backend search terms and keyword indexing.</li>
+          <li>Trained the internal team and built SOPs for account management.</li>
+          <li>Reinstated suspended accounts and recovered lost revenue.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="when">Aug 2021 to Aug 2022, USA (Remote)</span>
+        <h3>E-commerce Operations Manager</h3>
+        <span class="co">Express Wholesale</span>
+        <ul>
+          <li>Ran Amazon and Shopify operations, including logistics, sourcing and customer service.</li>
+          <li>Prepared daily profit reports and planned shipments and inventory.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="title">Education and languages</h2>
+    <div class="edu" style="margin-top:1.5rem">
+      <div><h3>BTech, Information Technology</h3><p>Karakoram International University, 2017 to 2021</p></div>
+      <div><h3>Languages</h3><p>English (professional), Urdu (native)</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="contact" id="contact">
+    <h2>Let's grow your Amazon brand.</h2>
+    <p>I'm based in Islamabad and open to senior Amazon and ecommerce brand roles, remote or hybrid.</p>
+    <div class="actions">
+      <a class="btn primary" href="mailto:Karimmasoomghuli@gmail.com">Karimmasoomghuli@gmail.com</a>
+      <a class="btn" href="[your-linkedin-url]" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+</div>
+
+<footer>© 2026 Karim Ali Shah. Senior Amazon Brand Manager, Islamabad.</footer>
+
+</body>
+</html>
